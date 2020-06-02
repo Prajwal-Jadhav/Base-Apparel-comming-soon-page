@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "t t"
+    "m m"
+    "c c";
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.top-bar {
+  grid-area: t;
+  padding: 32px;
+}
+
+.image {
+  grid-area: m;
+}
+
+.image img {
+  max-width: 100%;
+}
+
+.content {
+  grid-area: c;
+  padding: 65px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+}
+
+.content .content-header {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 11px;
+}
+
+.content .content-header #colored-heading-word {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+
+.content .content-header .heading-word {
+  color: hsl(0, 6%, 24%);
+}
+
+.content .content-info {
+  padding: 28px 0;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3em;
+  color: hsl(0, 36%, 70%);
+}
+
+.content .content-form {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.content .content-form input[type="email"] {
+  width: 305px;
+  padding: 14px 22px;
+  border-radius: 25px;
+  border: 1.5px solid hsl(0, 36%, 70%);
+  border-right: none;
+  background-color: hsl(0, 100%, 98.6%);
+}
+
+::placeholder {
+  font-size: 15px;
+  color: hsl(0, 36%, 70%);
+}
+
+.content .content-form button {
+  position: absolute;
+  right: 0px;
+  bottom: 1px;
+  padding: 11px 27px;
+  padding-right: 29px;
+  border-radius: 20px;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  -webkit-box-shadow: 1px 20px 26px -10px rgba(242, 201, 201, 0.99);
+  -moz-box-shadow: 1px 20px 26px -10px rgba(242, 201, 201, 0.99);
+  box-shadow: 1px 20px 26px -10px rgba(242, 201, 201, 0.99);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-areas:
+      "t t m m"
+      "c c m m";
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .top-bar {
+    max-width: 920px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .top-bar img {
+    padding: 10px 150px;
+    padding-bottom: 10px;
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content {
+    background-image: none;
+    max-width: 920px;
+    padding: 65px 0;
+    align-items: flex-start;
+  }
+
+  .content .content-header {
+    padding-left: 150px;
+    text-align: left;
+    font-size: 32px;
+  }
+
+  .content .content-info {
+    /* margin-left: 150px; */
+    margin-right: 150px;
+    text-align: left;
+  }
+
+  .content .content-form input[type="email"] {
+    width: 445px;
+  }
+
+  .content .content-form button {
+    padding: 11px 32px;
+  }
+
+  .content .content-info,
+  .content .content-form {
+    margin-left: 150px;
+  }
+}
